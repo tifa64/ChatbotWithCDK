@@ -1,8 +1,11 @@
 # Welcome to your CDK TypeScript project!
 
-This is a blank project for TypeScript development with CDK.
+* Created and deployed two CloudFormation Stacks: one that is used internally by CDK and another one for the project itself.
+* Created VPC with 2 subnets.
+* Implemented a lambda function inside the VPC to call [ELIZA](https://en.wikipedia.org/wiki/ELIZA).
+* Constructed API Gateway that allows HTTP requests into the VPC.
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+Project's architecture ![Image](https://intro-to-cdk.workshop.aws/images/what-you-will-build/architecture-final.png)
 
 ## Useful commands
 
