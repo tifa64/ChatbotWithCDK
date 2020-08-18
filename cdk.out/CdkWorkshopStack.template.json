@@ -1,0 +1,705 @@
+{
+  "Resources": {
+    "Vpc8378EB38": {
+      "Type": "AWS::EC2::VPC",
+      "Properties": {
+        "CidrBlock": "10.0.0.0/16",
+        "EnableDnsHostnames": true,
+        "EnableDnsSupport": true,
+        "InstanceTenancy": "default",
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "CdkWorkshopStack/Vpc"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkWorkshopStack/Vpc/Resource"
+      }
+    },
+    "VpcIsolatedSubnet1SubnetE48C5737": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "CidrBlock": "10.0.0.0/24",
+        "VpcId": {
+          "Ref": "Vpc8378EB38"
+        },
+        "AvailabilityZone": {
+          "Fn::Select": [
+            0,
+            {
+              "Fn::GetAZs": ""
+            }
+          ]
+        },
+        "MapPublicIpOnLaunch": false,
+        "Tags": [
+          {
+            "Key": "aws-cdk:subnet-name",
+            "Value": "Isolated"
+          },
+          {
+            "Key": "aws-cdk:subnet-type",
+            "Value": "Isolated"
+          },
+          {
+            "Key": "Name",
+            "Value": "CdkWorkshopStack/Vpc/IsolatedSubnet1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkWorkshopStack/Vpc/IsolatedSubnet1/Subnet"
+      }
+    },
+    "VpcIsolatedSubnet1RouteTable4771E3E5": {
+      "Type": "AWS::EC2::RouteTable",
+      "Properties": {
+        "VpcId": {
+          "Ref": "Vpc8378EB38"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "CdkWorkshopStack/Vpc/IsolatedSubnet1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkWorkshopStack/Vpc/IsolatedSubnet1/RouteTable"
+      }
+    },
+    "VpcIsolatedSubnet1RouteTableAssociationD300FCBB": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "VpcIsolatedSubnet1RouteTable4771E3E5"
+        },
+        "SubnetId": {
+          "Ref": "VpcIsolatedSubnet1SubnetE48C5737"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkWorkshopStack/Vpc/IsolatedSubnet1/RouteTableAssociation"
+      }
+    },
+    "VpcIsolatedSubnet2Subnet16364B91": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "CidrBlock": "10.0.1.0/24",
+        "VpcId": {
+          "Ref": "Vpc8378EB38"
+        },
+        "AvailabilityZone": {
+          "Fn::Select": [
+            1,
+            {
+              "Fn::GetAZs": ""
+            }
+          ]
+        },
+        "MapPublicIpOnLaunch": false,
+        "Tags": [
+          {
+            "Key": "aws-cdk:subnet-name",
+            "Value": "Isolated"
+          },
+          {
+            "Key": "aws-cdk:subnet-type",
+            "Value": "Isolated"
+          },
+          {
+            "Key": "Name",
+            "Value": "CdkWorkshopStack/Vpc/IsolatedSubnet2"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkWorkshopStack/Vpc/IsolatedSubnet2/Subnet"
+      }
+    },
+    "VpcIsolatedSubnet2RouteTable1D30AF7D": {
+      "Type": "AWS::EC2::RouteTable",
+      "Properties": {
+        "VpcId": {
+          "Ref": "Vpc8378EB38"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "CdkWorkshopStack/Vpc/IsolatedSubnet2"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkWorkshopStack/Vpc/IsolatedSubnet2/RouteTable"
+      }
+    },
+    "VpcIsolatedSubnet2RouteTableAssociationF7B18CCA": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "VpcIsolatedSubnet2RouteTable1D30AF7D"
+        },
+        "SubnetId": {
+          "Ref": "VpcIsolatedSubnet2Subnet16364B91"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkWorkshopStack/Vpc/IsolatedSubnet2/RouteTableAssociation"
+      }
+    },
+    "LambdaServiceRoleA8ED4D3B": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+              ]
+            ]
+          },
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole"
+              ]
+            ]
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkWorkshopStack/Lambda/ServiceRole/Resource"
+      }
+    },
+    "LambdaSecurityGroupE74659A1": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupDescription": "Automatic security group for Lambda Function CdkWorkshopStackLambdaF078F2DB",
+        "SecurityGroupEgress": [
+          {
+            "CidrIp": "0.0.0.0/0",
+            "Description": "Allow all outbound traffic by default",
+            "IpProtocol": "-1"
+          }
+        ],
+        "VpcId": {
+          "Ref": "Vpc8378EB38"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkWorkshopStack/Lambda/SecurityGroup/Resource"
+      }
+    },
+    "LambdaD247545B": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "AssetParametersf898140afda293cc60e43b9cec4b47ca732091d1f6763df98e7e45263ccd5235S3BucketB62E7EBB"
+          },
+          "S3Key": {
+            "Fn::Join": [
+              "",
+              [
+                {
+                  "Fn::Select": [
+                    0,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParametersf898140afda293cc60e43b9cec4b47ca732091d1f6763df98e7e45263ccd5235S3VersionKeyA84C8847"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Fn::Select": [
+                    1,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParametersf898140afda293cc60e43b9cec4b47ca732091d1f6763df98e7e45263ccd5235S3VersionKeyA84C8847"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        },
+        "Handler": "index.hello_world",
+        "Role": {
+          "Fn::GetAtt": [
+            "LambdaServiceRoleA8ED4D3B",
+            "Arn"
+          ]
+        },
+        "Runtime": "nodejs12.x",
+        "VpcConfig": {
+          "SecurityGroupIds": [
+            {
+              "Fn::GetAtt": [
+                "LambdaSecurityGroupE74659A1",
+                "GroupId"
+              ]
+            }
+          ],
+          "SubnetIds": [
+            {
+              "Ref": "VpcIsolatedSubnet1SubnetE48C5737"
+            },
+            {
+              "Ref": "VpcIsolatedSubnet2Subnet16364B91"
+            }
+          ]
+        }
+      },
+      "DependsOn": [
+        "LambdaServiceRoleA8ED4D3B"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "CdkWorkshopStack/Lambda/Resource",
+        "aws:asset:path": "asset.f898140afda293cc60e43b9cec4b47ca732091d1f6763df98e7e45263ccd5235",
+        "aws:asset:property": "Code"
+      }
+    },
+    "apiC8550315": {
+      "Type": "AWS::ApiGateway::RestApi",
+      "Properties": {
+        "Name": "api"
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkWorkshopStack/api/Resource"
+      }
+    },
+    "apiCloudWatchRoleAC81D93E": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "apigateway.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AmazonAPIGatewayPushToCloudWatchLogs"
+              ]
+            ]
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkWorkshopStack/api/CloudWatchRole/Resource"
+      }
+    },
+    "apiAccount57E28B43": {
+      "Type": "AWS::ApiGateway::Account",
+      "Properties": {
+        "CloudWatchRoleArn": {
+          "Fn::GetAtt": [
+            "apiCloudWatchRoleAC81D93E",
+            "Arn"
+          ]
+        }
+      },
+      "DependsOn": [
+        "apiC8550315"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "CdkWorkshopStack/api/Account"
+      }
+    },
+    "apiDeployment149F1294a0bdcbcae7ef78bee0a359781fd9d0ac": {
+      "Type": "AWS::ApiGateway::Deployment",
+      "Properties": {
+        "RestApiId": {
+          "Ref": "apiC8550315"
+        },
+        "Description": "Automatically created by the RestApi construct"
+      },
+      "DependsOn": [
+        "apiproxyANY7F13F09C",
+        "apiproxy4EA44110",
+        "apiANYB3DF8C3C"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "CdkWorkshopStack/api/Deployment/Resource"
+      }
+    },
+    "apiDeploymentStageprod896C8101": {
+      "Type": "AWS::ApiGateway::Stage",
+      "Properties": {
+        "RestApiId": {
+          "Ref": "apiC8550315"
+        },
+        "DeploymentId": {
+          "Ref": "apiDeployment149F1294a0bdcbcae7ef78bee0a359781fd9d0ac"
+        },
+        "StageName": "prod"
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkWorkshopStack/api/DeploymentStage.prod/Resource"
+      }
+    },
+    "apiproxy4EA44110": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Fn::GetAtt": [
+            "apiC8550315",
+            "RootResourceId"
+          ]
+        },
+        "PathPart": "{proxy+}",
+        "RestApiId": {
+          "Ref": "apiC8550315"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkWorkshopStack/api/Default/{proxy+}/Resource"
+      }
+    },
+    "apiproxyANYApiPermissionCdkWorkshopStackapi1B373F92ANYproxy563E2617": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "LambdaD247545B",
+            "Arn"
+          ]
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "apiC8550315"
+              },
+              "/",
+              {
+                "Ref": "apiDeploymentStageprod896C8101"
+              },
+              "/*/*"
+            ]
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkWorkshopStack/api/Default/{proxy+}/ANY/ApiPermission.CdkWorkshopStackapi1B373F92.ANY..{proxy+}"
+      }
+    },
+    "apiproxyANYApiPermissionTestCdkWorkshopStackapi1B373F92ANYproxyF32008B4": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "LambdaD247545B",
+            "Arn"
+          ]
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "apiC8550315"
+              },
+              "/test-invoke-stage/*/*"
+            ]
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkWorkshopStack/api/Default/{proxy+}/ANY/ApiPermission.Test.CdkWorkshopStackapi1B373F92.ANY..{proxy+}"
+      }
+    },
+    "apiproxyANY7F13F09C": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "HttpMethod": "ANY",
+        "ResourceId": {
+          "Ref": "apiproxy4EA44110"
+        },
+        "RestApiId": {
+          "Ref": "apiC8550315"
+        },
+        "AuthorizationType": "NONE",
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "Type": "AWS_PROXY",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":apigateway:",
+                {
+                  "Ref": "AWS::Region"
+                },
+                ":lambda:path/2015-03-31/functions/",
+                {
+                  "Fn::GetAtt": [
+                    "LambdaD247545B",
+                    "Arn"
+                  ]
+                },
+                "/invocations"
+              ]
+            ]
+          }
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkWorkshopStack/api/Default/{proxy+}/ANY/Resource"
+      }
+    },
+    "apiANYApiPermissionCdkWorkshopStackapi1B373F92ANY19387023": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "LambdaD247545B",
+            "Arn"
+          ]
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "apiC8550315"
+              },
+              "/",
+              {
+                "Ref": "apiDeploymentStageprod896C8101"
+              },
+              "/*/"
+            ]
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkWorkshopStack/api/Default/ANY/ApiPermission.CdkWorkshopStackapi1B373F92.ANY.."
+      }
+    },
+    "apiANYApiPermissionTestCdkWorkshopStackapi1B373F92ANY34F922F7": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "LambdaD247545B",
+            "Arn"
+          ]
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "apiC8550315"
+              },
+              "/test-invoke-stage/*/"
+            ]
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkWorkshopStack/api/Default/ANY/ApiPermission.Test.CdkWorkshopStackapi1B373F92.ANY.."
+      }
+    },
+    "apiANYB3DF8C3C": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "HttpMethod": "ANY",
+        "ResourceId": {
+          "Fn::GetAtt": [
+            "apiC8550315",
+            "RootResourceId"
+          ]
+        },
+        "RestApiId": {
+          "Ref": "apiC8550315"
+        },
+        "AuthorizationType": "NONE",
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "Type": "AWS_PROXY",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":apigateway:",
+                {
+                  "Ref": "AWS::Region"
+                },
+                ":lambda:path/2015-03-31/functions/",
+                {
+                  "Fn::GetAtt": [
+                    "LambdaD247545B",
+                    "Arn"
+                  ]
+                },
+                "/invocations"
+              ]
+            ]
+          }
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkWorkshopStack/api/Default/ANY/Resource"
+      }
+    }
+  },
+  "Parameters": {
+    "AssetParametersf898140afda293cc60e43b9cec4b47ca732091d1f6763df98e7e45263ccd5235S3BucketB62E7EBB": {
+      "Type": "String",
+      "Description": "S3 bucket for asset \"f898140afda293cc60e43b9cec4b47ca732091d1f6763df98e7e45263ccd5235\""
+    },
+    "AssetParametersf898140afda293cc60e43b9cec4b47ca732091d1f6763df98e7e45263ccd5235S3VersionKeyA84C8847": {
+      "Type": "String",
+      "Description": "S3 key for asset version \"f898140afda293cc60e43b9cec4b47ca732091d1f6763df98e7e45263ccd5235\""
+    },
+    "AssetParametersf898140afda293cc60e43b9cec4b47ca732091d1f6763df98e7e45263ccd5235ArtifactHashD40C0C5B": {
+      "Type": "String",
+      "Description": "Artifact hash for asset \"f898140afda293cc60e43b9cec4b47ca732091d1f6763df98e7e45263ccd5235\""
+    }
+  },
+  "Outputs": {
+    "apiEndpoint9349E63C": {
+      "Value": {
+        "Fn::Join": [
+          "",
+          [
+            "https://",
+            {
+              "Ref": "apiC8550315"
+            },
+            ".execute-api.",
+            {
+              "Ref": "AWS::Region"
+            },
+            ".",
+            {
+              "Ref": "AWS::URLSuffix"
+            },
+            "/",
+            {
+              "Ref": "apiDeploymentStageprod896C8101"
+            },
+            "/"
+          ]
+        ]
+      }
+    }
+  }
+}

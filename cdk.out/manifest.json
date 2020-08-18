@@ -1,0 +1,877 @@
+{
+  "version": "5.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "CdkWorkshopStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "CdkWorkshopStack.template.json"
+      },
+      "metadata": {
+        "/CdkWorkshopStack": [
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.f898140afda293cc60e43b9cec4b47ca732091d1f6763df98e7e45263ccd5235",
+              "id": "f898140afda293cc60e43b9cec4b47ca732091d1f6763df98e7e45263ccd5235",
+              "packaging": "zip",
+              "sourceHash": "f898140afda293cc60e43b9cec4b47ca732091d1f6763df98e7e45263ccd5235",
+              "s3BucketParameter": "AssetParametersf898140afda293cc60e43b9cec4b47ca732091d1f6763df98e7e45263ccd5235S3BucketB62E7EBB",
+              "s3KeyParameter": "AssetParametersf898140afda293cc60e43b9cec4b47ca732091d1f6763df98e7e45263ccd5235S3VersionKeyA84C8847",
+              "artifactHashParameter": "AssetParametersf898140afda293cc60e43b9cec4b47ca732091d1f6763df98e7e45263ccd5235ArtifactHashD40C0C5B"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/core/lib/construct-compat.ts:411:92)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:152:23)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:69:19)",
+              "CdkWorkshopStack.addFileAsset (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/core/lib/stack.ts:621:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:73:25)",
+              "new Asset (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:138:40)",
+              "AssetCode.bind (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/code.ts:180:20)",
+              "new Function (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/function.ts:556:29)",
+              "new CdkWorkshopStack (/Users/mostafma/cdk-workshop/lib/cdk-workshop-stack.ts:23:21)",
+              "Object.<anonymous> (/Users/mostafma/cdk-workshop/bin/cdk-workshop.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Module.m._compile (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/Users/mostafma/.nvm/versions/node/v12.16.3/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkWorkshopStack/Vpc/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Vpc8378EB38",
+            "trace": [
+              "new Vpc (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1166:21)",
+              "new CdkWorkshopStack (/Users/mostafma/cdk-workshop/lib/cdk-workshop-stack.ts:11:17)",
+              "Object.<anonymous> (/Users/mostafma/cdk-workshop/bin/cdk-workshop.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Module.m._compile (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/Users/mostafma/.nvm/versions/node/v12.16.3/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkWorkshopStack/Vpc/IsolatedSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcIsolatedSubnet1SubnetE48C5737",
+            "trace": [
+              "new Subnet (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1488:20)",
+              "new PrivateSubnet (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1740:5)",
+              "/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1356:34",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1328:28)",
+              "Vpc.createSubnets (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1317:12)",
+              "new Vpc (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1195:10)",
+              "new CdkWorkshopStack (/Users/mostafma/cdk-workshop/lib/cdk-workshop-stack.ts:11:17)",
+              "Object.<anonymous> (/Users/mostafma/cdk-workshop/bin/cdk-workshop.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Module.m._compile (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/Users/mostafma/.nvm/versions/node/v12.16.3/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkWorkshopStack/Vpc/IsolatedSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcIsolatedSubnet1RouteTable4771E3E5",
+            "trace": [
+              "new Subnet (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1505:19)",
+              "new PrivateSubnet (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1740:5)",
+              "/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1356:34",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1328:28)",
+              "Vpc.createSubnets (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1317:12)",
+              "new Vpc (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1195:10)",
+              "new CdkWorkshopStack (/Users/mostafma/cdk-workshop/lib/cdk-workshop-stack.ts:11:17)",
+              "Object.<anonymous> (/Users/mostafma/cdk-workshop/bin/cdk-workshop.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Module.m._compile (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/Users/mostafma/.nvm/versions/node/v12.16.3/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkWorkshopStack/Vpc/IsolatedSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcIsolatedSubnet1RouteTableAssociationD300FCBB",
+            "trace": [
+              "new Subnet (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1511:5)",
+              "new PrivateSubnet (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1740:5)",
+              "/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1356:34",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1328:28)",
+              "Vpc.createSubnets (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1317:12)",
+              "new Vpc (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1195:10)",
+              "new CdkWorkshopStack (/Users/mostafma/cdk-workshop/lib/cdk-workshop-stack.ts:11:17)",
+              "Object.<anonymous> (/Users/mostafma/cdk-workshop/bin/cdk-workshop.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Module.m._compile (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/Users/mostafma/.nvm/versions/node/v12.16.3/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkWorkshopStack/Vpc/IsolatedSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcIsolatedSubnet2Subnet16364B91",
+            "trace": [
+              "new Subnet (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1488:20)",
+              "new PrivateSubnet (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1740:5)",
+              "/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1356:34",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1328:28)",
+              "Vpc.createSubnets (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1317:12)",
+              "new Vpc (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1195:10)",
+              "new CdkWorkshopStack (/Users/mostafma/cdk-workshop/lib/cdk-workshop-stack.ts:11:17)",
+              "Object.<anonymous> (/Users/mostafma/cdk-workshop/bin/cdk-workshop.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Module.m._compile (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/Users/mostafma/.nvm/versions/node/v12.16.3/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkWorkshopStack/Vpc/IsolatedSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcIsolatedSubnet2RouteTable1D30AF7D",
+            "trace": [
+              "new Subnet (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1505:19)",
+              "new PrivateSubnet (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1740:5)",
+              "/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1356:34",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1328:28)",
+              "Vpc.createSubnets (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1317:12)",
+              "new Vpc (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1195:10)",
+              "new CdkWorkshopStack (/Users/mostafma/cdk-workshop/lib/cdk-workshop-stack.ts:11:17)",
+              "Object.<anonymous> (/Users/mostafma/cdk-workshop/bin/cdk-workshop.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Module.m._compile (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/Users/mostafma/.nvm/versions/node/v12.16.3/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkWorkshopStack/Vpc/IsolatedSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcIsolatedSubnet2RouteTableAssociationF7B18CCA",
+            "trace": [
+              "new Subnet (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1511:5)",
+              "new PrivateSubnet (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1740:5)",
+              "/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1356:34",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1328:28)",
+              "Vpc.createSubnets (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1317:12)",
+              "new Vpc (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1195:10)",
+              "new CdkWorkshopStack (/Users/mostafma/cdk-workshop/lib/cdk-workshop-stack.ts:11:17)",
+              "Object.<anonymous> (/Users/mostafma/cdk-workshop/bin/cdk-workshop.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Module.m._compile (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/Users/mostafma/.nvm/versions/node/v12.16.3/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkWorkshopStack/Lambda/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LambdaServiceRoleA8ED4D3B",
+            "trace": [
+              "new Role (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-iam/lib/role.ts:320:18)",
+              "new Function (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/function.ts:536:31)",
+              "new CdkWorkshopStack (/Users/mostafma/cdk-workshop/lib/cdk-workshop-stack.ts:23:21)",
+              "Object.<anonymous> (/Users/mostafma/cdk-workshop/bin/cdk-workshop.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Module.m._compile (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/Users/mostafma/.nvm/versions/node/v12.16.3/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkWorkshopStack/Lambda/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LambdaSecurityGroupE74659A1",
+            "trace": [
+              "new SecurityGroup (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-ec2/lib/security-group.ts:370:26)",
+              "Function.configureVpc (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/function.ts:815:52)",
+              "new Function (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/function.ts:601:23)",
+              "new CdkWorkshopStack (/Users/mostafma/cdk-workshop/lib/cdk-workshop-stack.ts:23:21)",
+              "Object.<anonymous> (/Users/mostafma/cdk-workshop/bin/cdk-workshop.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Module.m._compile (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/Users/mostafma/.nvm/versions/node/v12.16.3/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkWorkshopStack/Lambda/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LambdaD247545B",
+            "trace": [
+              "new Function (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/function.ts:585:35)",
+              "new CdkWorkshopStack (/Users/mostafma/cdk-workshop/lib/cdk-workshop-stack.ts:23:21)",
+              "Object.<anonymous> (/Users/mostafma/cdk-workshop/bin/cdk-workshop.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Module.m._compile (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/Users/mostafma/.nvm/versions/node/v12.16.3/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkWorkshopStack/AssetParameters/f898140afda293cc60e43b9cec4b47ca732091d1f6763df98e7e45263ccd5235/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersf898140afda293cc60e43b9cec4b47ca732091d1f6763df98e7e45263ccd5235S3BucketB62E7EBB",
+            "trace": [
+              "new FileAssetParameters (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:16:32)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:139:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:69:19)",
+              "CdkWorkshopStack.addFileAsset (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/core/lib/stack.ts:621:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:73:25)",
+              "new Asset (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:138:40)",
+              "AssetCode.bind (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/code.ts:180:20)",
+              "new Function (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/function.ts:556:29)",
+              "new CdkWorkshopStack (/Users/mostafma/cdk-workshop/lib/cdk-workshop-stack.ts:23:21)",
+              "Object.<anonymous> (/Users/mostafma/cdk-workshop/bin/cdk-workshop.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Module.m._compile (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/Users/mostafma/.nvm/versions/node/v12.16.3/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkWorkshopStack/AssetParameters/f898140afda293cc60e43b9cec4b47ca732091d1f6763df98e7e45263ccd5235/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersf898140afda293cc60e43b9cec4b47ca732091d1f6763df98e7e45263ccd5235S3VersionKeyA84C8847",
+            "trace": [
+              "new FileAssetParameters (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:21:31)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:139:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:69:19)",
+              "CdkWorkshopStack.addFileAsset (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/core/lib/stack.ts:621:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:73:25)",
+              "new Asset (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:138:40)",
+              "AssetCode.bind (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/code.ts:180:20)",
+              "new Function (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/function.ts:556:29)",
+              "new CdkWorkshopStack (/Users/mostafma/cdk-workshop/lib/cdk-workshop-stack.ts:23:21)",
+              "Object.<anonymous> (/Users/mostafma/cdk-workshop/bin/cdk-workshop.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Module.m._compile (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/Users/mostafma/.nvm/versions/node/v12.16.3/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkWorkshopStack/AssetParameters/f898140afda293cc60e43b9cec4b47ca732091d1f6763df98e7e45263ccd5235/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersf898140afda293cc60e43b9cec4b47ca732091d1f6763df98e7e45263ccd5235ArtifactHashD40C0C5B",
+            "trace": [
+              "new FileAssetParameters (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:26:36)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:139:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:69:19)",
+              "CdkWorkshopStack.addFileAsset (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/core/lib/stack.ts:621:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:73:25)",
+              "new Asset (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:138:40)",
+              "AssetCode.bind (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/code.ts:180:20)",
+              "new Function (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/function.ts:556:29)",
+              "new CdkWorkshopStack (/Users/mostafma/cdk-workshop/lib/cdk-workshop-stack.ts:23:21)",
+              "Object.<anonymous> (/Users/mostafma/cdk-workshop/bin/cdk-workshop.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Module.m._compile (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/Users/mostafma/.nvm/versions/node/v12.16.3/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkWorkshopStack/api/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apiC8550315",
+            "trace": [
+              "new RestApi (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:588:22)",
+              "new LambdaRestApi (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:50:5)",
+              "new CdkWorkshopStack (/Users/mostafma/cdk-workshop/lib/cdk-workshop-stack.ts:35:24)",
+              "Object.<anonymous> (/Users/mostafma/cdk-workshop/bin/cdk-workshop.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Module.m._compile (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/Users/mostafma/.nvm/versions/node/v12.16.3/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkWorkshopStack/api/CloudWatchRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apiCloudWatchRoleAC81D93E",
+            "trace": [
+              "new Role (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-iam/lib/role.ts:320:18)",
+              "LambdaRestApi.configureCloudWatchRole (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:395:18)",
+              "new RestApi (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:605:12)",
+              "new LambdaRestApi (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:50:5)",
+              "new CdkWorkshopStack (/Users/mostafma/cdk-workshop/lib/cdk-workshop-stack.ts:35:24)",
+              "Object.<anonymous> (/Users/mostafma/cdk-workshop/bin/cdk-workshop.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Module.m._compile (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/Users/mostafma/.nvm/versions/node/v12.16.3/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkWorkshopStack/api/Account": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apiAccount57E28B43",
+            "trace": [
+              "LambdaRestApi.configureCloudWatchRole (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:400:22)",
+              "new RestApi (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:605:12)",
+              "new LambdaRestApi (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:50:5)",
+              "new CdkWorkshopStack (/Users/mostafma/cdk-workshop/lib/cdk-workshop-stack.ts:35:24)",
+              "Object.<anonymous> (/Users/mostafma/cdk-workshop/bin/cdk-workshop.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Module.m._compile (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/Users/mostafma/.nvm/versions/node/v12.16.3/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkWorkshopStack/api/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apiDeployment149F1294a0bdcbcae7ef78bee0a359781fd9d0ac",
+            "trace": [
+              "new Deployment (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/deployment.ts:70:21)",
+              "LambdaRestApi.configureDeployment (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:411:32)",
+              "new RestApi (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:608:10)",
+              "new LambdaRestApi (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:50:5)",
+              "new CdkWorkshopStack (/Users/mostafma/cdk-workshop/lib/cdk-workshop-stack.ts:35:24)",
+              "Object.<anonymous> (/Users/mostafma/cdk-workshop/bin/cdk-workshop.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Module.m._compile (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/Users/mostafma/.nvm/versions/node/v12.16.3/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkWorkshopStack/api/DeploymentStage.prod/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apiDeploymentStageprod896C8101",
+            "trace": [
+              "new Stage (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/stage.ts:236:22)",
+              "LambdaRestApi.configureDeployment (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:421:30)",
+              "new RestApi (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:608:10)",
+              "new LambdaRestApi (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:50:5)",
+              "new CdkWorkshopStack (/Users/mostafma/cdk-workshop/lib/cdk-workshop-stack.ts:35:24)",
+              "Object.<anonymous> (/Users/mostafma/cdk-workshop/bin/cdk-workshop.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Module.m._compile (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/Users/mostafma/.nvm/versions/node/v12.16.3/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkWorkshopStack/api/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apiEndpoint9349E63C",
+            "trace": [
+              "LambdaRestApi.configureDeployment (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:426:7)",
+              "new RestApi (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:608:10)",
+              "new LambdaRestApi (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:50:5)",
+              "new CdkWorkshopStack (/Users/mostafma/cdk-workshop/lib/cdk-workshop-stack.ts:35:24)",
+              "Object.<anonymous> (/Users/mostafma/cdk-workshop/bin/cdk-workshop.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Module.m._compile (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/Users/mostafma/.nvm/versions/node/v12.16.3/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkWorkshopStack/api/Default/{proxy+}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apiproxy4EA44110",
+            "trace": [
+              "new Resource (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:401:22)",
+              "new ProxyResource (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:473:5)",
+              "RootResource.addProxy (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:190:12)",
+              "new LambdaRestApi (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:57:17)",
+              "new CdkWorkshopStack (/Users/mostafma/cdk-workshop/lib/cdk-workshop-stack.ts:35:24)",
+              "Object.<anonymous> (/Users/mostafma/cdk-workshop/bin/cdk-workshop.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Module.m._compile (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/Users/mostafma/.nvm/versions/node/v12.16.3/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkWorkshopStack/api/Default/{proxy+}/ANY/ApiPermission.CdkWorkshopStackapi1B373F92.ANY..{proxy+}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apiproxyANYApiPermissionCdkWorkshopStackapi1B373F92ANYproxy563E2617",
+            "trace": [
+              "Function.addPermission (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:212:5)",
+              "LambdaIntegration.bind (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.ts:61:18)",
+              "new Method (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:196:36)",
+              "ProxyResource.addMethod (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:186:12)",
+              "ProxyResource.addMethod (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:495:18)",
+              "new ProxyResource (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:482:29)",
+              "RootResource.addProxy (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:190:12)",
+              "new LambdaRestApi (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:57:17)",
+              "new CdkWorkshopStack (/Users/mostafma/cdk-workshop/lib/cdk-workshop-stack.ts:35:24)",
+              "Object.<anonymous> (/Users/mostafma/cdk-workshop/bin/cdk-workshop.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Module.m._compile (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/Users/mostafma/.nvm/versions/node/v12.16.3/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkWorkshopStack/api/Default/{proxy+}/ANY/ApiPermission.Test.CdkWorkshopStackapi1B373F92.ANY..{proxy+}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apiproxyANYApiPermissionTestCdkWorkshopStackapi1B373F92ANYproxyF32008B4",
+            "trace": [
+              "Function.addPermission (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:212:5)",
+              "LambdaIntegration.bind (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.ts:69:20)",
+              "new Method (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:196:36)",
+              "ProxyResource.addMethod (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:186:12)",
+              "ProxyResource.addMethod (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:495:18)",
+              "new ProxyResource (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:482:29)",
+              "RootResource.addProxy (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:190:12)",
+              "new LambdaRestApi (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:57:17)",
+              "new CdkWorkshopStack (/Users/mostafma/cdk-workshop/lib/cdk-workshop-stack.ts:35:24)",
+              "Object.<anonymous> (/Users/mostafma/cdk-workshop/bin/cdk-workshop.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Module.m._compile (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/Users/mostafma/.nvm/versions/node/v12.16.3/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkWorkshopStack/api/Default/{proxy+}/ANY/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apiproxyANY7F13F09C",
+            "trace": [
+              "new Method (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:214:22)",
+              "ProxyResource.addMethod (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:186:12)",
+              "ProxyResource.addMethod (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:495:18)",
+              "new ProxyResource (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:482:29)",
+              "RootResource.addProxy (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:190:12)",
+              "new LambdaRestApi (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:57:17)",
+              "new CdkWorkshopStack (/Users/mostafma/cdk-workshop/lib/cdk-workshop-stack.ts:35:24)",
+              "Object.<anonymous> (/Users/mostafma/cdk-workshop/bin/cdk-workshop.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Module.m._compile (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/Users/mostafma/.nvm/versions/node/v12.16.3/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkWorkshopStack/api/Default/ANY/ApiPermission.CdkWorkshopStackapi1B373F92.ANY..": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apiANYApiPermissionCdkWorkshopStackapi1B373F92ANY19387023",
+            "trace": [
+              "Function.addPermission (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:212:5)",
+              "LambdaIntegration.bind (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.ts:61:18)",
+              "new Method (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:196:36)",
+              "RootResource.addMethod (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:186:12)",
+              "ProxyResource.addMethod (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:492:29)",
+              "new ProxyResource (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:482:29)",
+              "RootResource.addProxy (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:190:12)",
+              "new LambdaRestApi (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:57:17)",
+              "new CdkWorkshopStack (/Users/mostafma/cdk-workshop/lib/cdk-workshop-stack.ts:35:24)",
+              "Object.<anonymous> (/Users/mostafma/cdk-workshop/bin/cdk-workshop.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Module.m._compile (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/Users/mostafma/.nvm/versions/node/v12.16.3/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkWorkshopStack/api/Default/ANY/ApiPermission.Test.CdkWorkshopStackapi1B373F92.ANY..": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apiANYApiPermissionTestCdkWorkshopStackapi1B373F92ANY34F922F7",
+            "trace": [
+              "Function.addPermission (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:212:5)",
+              "LambdaIntegration.bind (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.ts:69:20)",
+              "new Method (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:196:36)",
+              "RootResource.addMethod (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:186:12)",
+              "ProxyResource.addMethod (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:492:29)",
+              "new ProxyResource (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:482:29)",
+              "RootResource.addProxy (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:190:12)",
+              "new LambdaRestApi (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:57:17)",
+              "new CdkWorkshopStack (/Users/mostafma/cdk-workshop/lib/cdk-workshop-stack.ts:35:24)",
+              "Object.<anonymous> (/Users/mostafma/cdk-workshop/bin/cdk-workshop.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Module.m._compile (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/Users/mostafma/.nvm/versions/node/v12.16.3/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/CdkWorkshopStack/api/Default/ANY/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apiANYB3DF8C3C",
+            "trace": [
+              "new Method (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:214:22)",
+              "RootResource.addMethod (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:186:12)",
+              "ProxyResource.addMethod (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:492:29)",
+              "new ProxyResource (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:482:29)",
+              "RootResource.addProxy (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:190:12)",
+              "new LambdaRestApi (/Users/mostafma/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:57:17)",
+              "new CdkWorkshopStack (/Users/mostafma/cdk-workshop/lib/cdk-workshop-stack.ts:35:24)",
+              "Object.<anonymous> (/Users/mostafma/cdk-workshop/bin/cdk-workshop.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Module.m._compile (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "main (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/mostafma/cdk-workshop/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1133:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1153:10)",
+              "Module.load (internal/modules/cjs/loader.js:977:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:877:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)",
+              "/Users/mostafma/.nvm/versions/node/v12.16.3/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "runtime": {
+    "libraries": {
+      "@aws-cdk/core": "1.58.0",
+      "@aws-cdk/cx-api": "1.58.0",
+      "@aws-cdk/cloud-assembly-schema": "1.58.0",
+      "@aws-cdk/aws-ec2": "1.58.0",
+      "@aws-cdk/aws-iam": "1.58.0",
+      "@aws-cdk/region-info": "1.58.0",
+      "@aws-cdk/aws-kms": "1.58.0",
+      "@aws-cdk/aws-ssm": "1.58.0",
+      "@aws-cdk/aws-logs": "1.58.0",
+      "@aws-cdk/aws-cloudwatch": "1.58.0",
+      "@aws-cdk/aws-s3": "1.58.0",
+      "@aws-cdk/aws-events": "1.58.0",
+      "@aws-cdk/aws-lambda": "1.58.0",
+      "@aws-cdk/aws-applicationautoscaling": "1.58.0",
+      "@aws-cdk/aws-autoscaling-common": "1.58.0",
+      "@aws-cdk/aws-codeguruprofiler": "1.58.0",
+      "@aws-cdk/aws-sqs": "1.58.0",
+      "@aws-cdk/aws-s3-assets": "1.58.0",
+      "@aws-cdk/assets": "1.58.0",
+      "@aws-cdk/aws-apigateway": "1.58.0",
+      "jsii-runtime": "node.js/v12.16.3"
+    }
+  }
+}
